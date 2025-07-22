@@ -1,18 +1,13 @@
-# Sintax-PUG
+# Certificación HTML Rodrigo Salgado
 
-Un boilerplate modular para desarrollo front-end con PUG/JADE, enfocado en la creación de sitios web estáticos pre-compilados.
+Proyecto de certificación final HTML
 
 ## Descripción del Proyecto
 
-Este boilerplate proporciona una arquitectura estructurada para el desarrollo front-end utilizando el motor de plantillas PUG. Está diseñado siguiendo principios de modularidad, reutilización y separación de responsabilidades, permitiendo un flujo de trabajo eficiente y organizado.
-
-Una característica distintiva de este proyecto es el uso de la compatibilidad de HTML con PUG, donde solo los elementos específicos de PUG utilizan su sintaxis nativa, mientras que el resto del contenido se escribe utilizando bloques HTML estándar dentro de los archivos PUG.
-
-La arquitectura facilita el desarrollo local con compilación automática y está optimizada para el despliegue de archivos estáticos en entornos de producción con servidores web de alto rendimiento.
+Copypaste del profe pero aumentando un poco el nivel del proyecto
 
 ## Arquitectura del Proyecto
-
-```
+ 
 /
 ├── assets/                  # Recursos estáticos compilados
 │   ├── css/                 # Estilos
@@ -23,7 +18,7 @@ La arquitectura facilita el desarrollo local con compilación automática y est�
 ├── src/                     # Código fuente
 │   ├── components/          # Componentes modulares
 │   ├── data/                # Gestión de datos
-│   │   └── collections/     # Colecciones de datos estructurados
+│   │   └── collections/     # Colecciones de datos estructurados 
 │   ├── functions/           # Lógica funcional
 │   │   └── utilities/       # Funciones de utilidad
 │   ├── includes/            # Fragmentos estructurales
@@ -33,7 +28,7 @@ La arquitectura facilita el desarrollo local con compilación automática y est�
 │       └── sections/        # Secciones específicas
 ├── index.html               # Punto de entrada compilado
 └── prepros-6.config         # Configuración de compilación
-```
+ 
 
 ## Principios Arquitectónicos
 
@@ -182,11 +177,7 @@ El boilerplate está diseñado para ser extendido mediante:
 3. Adición de nuevas funciones utilitarias
 4. Integración con sistemas externos
 5. Personalización de plantillas base
-
-
-## Información Adicional
-
-Este boilerplate fue desarrollado como una solución arquitectónica para la creación eficiente de sitios web estáticos con un enfoque en modularidad y mantenibilidad.
+ 
 
 ## Licencia
 

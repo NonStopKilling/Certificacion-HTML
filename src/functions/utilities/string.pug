@@ -42,5 +42,11 @@
         return `USD ${amount.toLocaleString('es-ES')}`;
     };
 
+ //- Format_CLP('10000') -> $10.000 CLP
+    const Format_CLP = (amount) => {
+        const numeric = Number(amount);
+        if (isNaN(numeric)) return '$0 CLP'; // Manejo de errores para valores no numéricos
+        return `$${numeric.toLocaleString('es-CL')} CLP`;
+    };
 
 //-</script>

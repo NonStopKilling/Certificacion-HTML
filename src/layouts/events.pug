@@ -1,0 +1,363 @@
+//- mixin event_layout( type, name )
+//-     - const event = events[type].find( event => event.name === name )
+
+//-     <main class="content">
+
+//-         <h1>Nombre de Evento: #{ event.name }</h1>
+//-         <h1>Categoría de Evento: #{ event.category }</h1>
+
+//-     </main>
+
+//- mixin event_layout( type, name )
+//-     - const event = events[type].find( event => event.name === name )
+
+//-     <main class="content">
+
+//-         <h2>Nombre del Evento: <span style="font-weight: lighter">#{ event.name }</span></h2>
+//-         <h2>Tipo del Evento: <span style="font-weight: lighter">#{ event.type }</span></h2>
+//-         <h2>Categoría del Evento: <span style="font-weight: lighter">#{ event.category }</span></h2>
+//-         <h2>Lugar del Evento: <span style="font-weight: lighter">#{ event.place }</span></h2>
+//-         <h2>Hora de Inicio del Evento: <span style="font-weight: lighter">#{ event.start_time }</span></h2>
+//-         <h2>Hora de Termino del Evento: <span style="font-weight: lighter">#{ event.end_time }</span></h2>
+//-         <h2>Precio Desde: <span style="font-weight: lighter">#{ event.price_from }</span></h2>
+
+//-     </main>
+
+
+
+//- mixin event_layout( type, name )
+//-     - const event = events[type].find( event => event.name === name )
+
+//-      <main class="event-detail">
+
+//-         <!-- Información del evento -->
+//-         <section class="event-info-detail">
+//-             <div class="event-header">
+//-                 <div class="event-image-large"></div>
+//-                 <div class="event-badge">Techno</div>
+//-             </div>
+
+//-             <div class="event-content">
+//-                 <h1 class="event-title">Warehouse Sessions</h1>
+//-                 <p class="event-subtitle">Una noche épica de techno underground en el corazón de la ciudad</p>
+
+//-                 <div class="event-details-grid">
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">📅</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Fecha</div>
+//-                             <div class="detail-value">Sábado 12 de Julio</div>
+//-                         </div>
+//-                     </div>
+
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">⏰</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Horario</div>
+//-                             <div class="detail-value">22:00 - 06:00</div>
+//-                         </div>
+//-                     </div>
+
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">🎧</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Género</div>
+//-                             <div class="detail-value">Techno Underground</div>
+//-                         </div>
+//-                     </div>
+
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">👥</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Edad mínima</div>
+//-                             <div class="detail-value">18 años</div>
+//-                         </div>
+//-                     </div>
+//-                 </div>
+
+//-                 <div class="event-description">
+//-                     <h3 class="description-title">Sobre el evento</h3>
+//-                     <p class="description-text">Sumérgete en una experiencia sonora única donde los beats más profundos del techno underground toman vida. Esta sesión nocturna promete llevarte a través de un viaje musical intenso con los mejores DJs locales e internacionales. El warehouse se transforma en un templo del sonido donde cada bass drop resuena en tu alma.
+//-                     </p>
+//-                     <br>
+//-                     <p class="description-text">Ven preparado para una noche de música sin límites, luces estroboscópicas y una atmósfera que solo el verdadero underground puede ofrecer. Esta es tu oportunidad de ser parte de algo más grande que la música: es una experiencia colectiva inolvidable.
+//-                     </p>
+//-                 </div>
+
+//-                 <div class="venue-info">
+//-                     <h3 class="venue-title">📍 Underground Club</h3>
+//-                     <p class="venue-address">Av. Industrial 1247, Zona Norte, Santiago</p>
+//-                     <div class="venue-features">
+//-                         <span class="feature-tag">Sistema de sonido profesional</span>
+//-                         <span class="feature-tag">2 pisos</span>
+//-                         <span class="feature-tag">Estacionamiento</span>
+//-                         <span class="feature-tag">Bar completo</span>
+//-                         <span class="feature-tag">Zona chill</span>
+//-                     </div>
+//-                 </div>
+
+//-             </div>
+//-         </section>
+
+
+//-         <!-- Sección de compra -->
+//-         <aside class="purchase-section" id="purchase-section">
+//-             <h2 class="purchase-title">Comprar Tickets</h2>
+
+//-             <div class="price-display">
+//-                 <div class="price-from">Desde</div>
+//-                 <div class="price-amount" id="min-price">$25.000</div>
+//-             </div>
+
+//-             <div class="ticket-options" id="ticket-options">
+//-                 <div class="option-title">Tipo de entrada</div>
+//-                 <!-- Las opciones de tickets se generarán dinámicamente con JavaScript -->
+//-             </div>
+
+//-             <div class="quantity-selector">
+//-                 <span class="quantity-label">Cantidad:</span>
+//-                 <div class="quantity-controls">
+//-                     <button class="quantity-btn" id="decrease-btn">-</button>
+//-                     <span class="quantity-display" id="quantity-display">1</span>
+//-                     <button class="quantity-btn" id="increase-btn">+</button>
+//-                 </div>
+//-             </div>
+
+//-             <div class="total-section" id="total-section">
+//-                 <!-- Esta sección se actualizará dinámicamente con JavaScript -->
+//-             </div>
+
+//-             <button class="buy-now-btn" id="buy-now-btn">Comprar Ahora</button>
+
+//-             <div class="secure-info">🔒 Compra 100% segura y protegida</div>
+//-         </aside>
+
+//-         <script type="module" src="#{base}assets/js/custom/sticky_ticket.js"></script>
+        
+//-     </main>
+
+
+
+//- mixin event_layout( type, name )
+//-     - const event = events[type].find( event => event.name === name )
+
+//-      <main class="event-detail">
+
+//-         //- <!-- Información del evento -->
+//-         <section class="event-info-detail">
+//-             <div class="event-header">
+//-                 <div class="event-image-large"></div>
+//-                 <div class="event-badge">#{event.category}</div>
+//-             </div>
+
+//-             <div class="event-content">
+//-                 <h1 class="event-title">Warehouse Sessions</h1>
+//-                 <p class="event-subtitle">Una noche épica de techno underground en el corazón de la ciudad</p>
+
+//-                 <div class="event-details-grid">
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">📅</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Fecha</div>
+//-                             <div class="detail-value">Sábado 12 de Julio</div>
+//-                         </div>
+//-                     </div>
+
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">⏰</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Horario</div>
+//-                             <div class="detail-value">22:00 - 06:00</div>
+//-                         </div>
+//-                     </div>
+
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">🎧</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Género</div>
+//-                             <div class="detail-value">Techno Underground</div>
+//-                         </div>
+//-                     </div>
+
+//-                     <div class="detail-item">
+//-                         <div class="detail-icon">👥</div>
+//-                         <div class="detail-text">
+//-                             <div class="detail-label">Edad mínima</div>
+//-                             <div class="detail-value">18 años</div>
+//-                         </div>
+//-                     </div>
+//-                 </div>
+
+//-                 <div class="event-description">
+//-                     <h3 class="description-title">Sobre el evento</h3>
+//-                     <p class="description-text">Sumérgete en una experiencia sonora única donde los beats más profundos del techno underground toman vida. Esta sesión nocturna promete llevarte a través de un viaje musical intenso con los mejores DJs locales e internacionales. El warehouse se transforma en un templo del sonido donde cada bass drop resuena en tu alma.
+//-                     </p>
+//-                     <br>
+//-                     <p class="description-text">Ven preparado para una noche de música sin límites, luces estroboscópicas y una atmósfera que solo el verdadero underground puede ofrecer. Esta es tu oportunidad de ser parte de algo más grande que la música: es una experiencia colectiva inolvidable.
+//-                     </p>
+//-                 </div>
+
+//-                 <div class="venue-info">
+//-                     <h3 class="venue-title">📍 Underground Club</h3>
+//-                     <p class="venue-address">Av. Industrial 1247, Zona Norte, Santiago</p>
+//-                     <div class="venue-features">
+//-                         <span class="feature-tag">Sistema de sonido profesional</span>
+//-                         <span class="feature-tag">2 pisos</span>
+//-                         <span class="feature-tag">Estacionamiento</span>
+//-                         <span class="feature-tag">Bar completo</span>
+//-                         <span class="feature-tag">Zona chill</span>
+//-                     </div>
+//-                 </div>
+
+//-             </div>
+//-         </section>
+
+
+//-         //- <!-- Sección de compra -->
+//-         <aside class="purchase-section" id="purchase-section">
+//-             <h2 class="purchase-title">Comprar Tickets</h2>
+
+//-             <div class="price-display">
+//-                 <div class="price-from">Desde</div>
+//-                 <div class="price-amount" id="min-price">$25.000</div>
+//-             </div>
+
+//-             <div class="ticket-options" id="ticket-options">
+//-                 <div class="option-title">Tipo de entrada</div>
+//-                 <!-- Las opciones de tickets se generarán dinámicamente con JavaScript -->
+//-             </div>
+
+//-             <div class="quantity-selector">
+//-                 <span class="quantity-label">Cantidad:</span>
+//-                 <div class="quantity-controls">
+//-                     <button class="quantity-btn" id="decrease-btn">-</button>
+//-                     <span class="quantity-display" id="quantity-display">1</span>
+//-                     <button class="quantity-btn" id="increase-btn">+</button>
+//-                 </div>
+//-             </div>
+
+//-             <div class="total-section" id="total-section">
+//-                 //- <!-- Esta sección se actualizará dinámicamente con JavaScript -->
+//-             </div>
+
+//-             <button class="buy-now-btn" id="buy-now-btn">Comprar Ahora</button>
+
+//-             <div class="secure-info">🔒 Compra 100% segura y protegida</div>
+//-         </aside>
+
+//-         <script type="module" src="#{base}assets/js/custom/sticky_ticket.js"></script>
+        
+//-     </main>
+
+mixin event_layout( type, name )
+    - const event = events[type].find( event => event.name === name )
+
+     <main class="event-detail">
+
+        //- <!-- Información del evento -->
+        <section class="event-info-detail">
+            <div class="event-header">
+                //- <div class="event-image-large"></div>
+                <div class="event-badge">#{event.category}</div>
+            </div>
+
+            <div class="event-content">
+                <h1 class="event-title">#{event.name}</h1>
+                <p class="event-subtitle">Una noche épica de techno underground en el corazón de la ciudad</p>
+
+                <div class="event-details-grid">
+                    <div class="detail-item">
+                        <div class="detail-icon">📅</div>
+                        <div class="detail-text">
+                            <div class="detail-label">Fecha</div>
+                            <div class="detail-value">#{event.date}</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon">⏰</div>
+                        <div class="detail-text">
+                            <div class="detail-label">Horario</div>
+                            <div class="detail-value">#{event.start_time} - #{event.end_time}</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon">🎧</div>
+                        <div class="detail-text">
+                            <div class="detail-label">Género</div>
+                            <div class="detail-value">#{event.category}</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon">👥</div>
+                        <div class="detail-text">
+                            <div class="detail-label">Edad mínima</div>
+                            <div class="detail-value">18 años</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-description">
+                    <h3 class="description-title">Sobre el evento</h3>
+                    <p class="description-text">Sumérgete en una experiencia sonora única donde los beats más profundos del techno underground toman vida. Esta sesión nocturna promete llevarte a través de un viaje musical intenso con los mejores DJs locales e internacionales. El warehouse se transforma en un templo del sonido donde cada bass drop resuena en tu alma.
+                    </p>
+                    <br>
+                    <p class="description-text">Ven preparado para una noche de música sin límites, luces estroboscópicas y una atmósfera que solo el verdadero underground puede ofrecer. Esta es tu oportunidad de ser parte de algo más grande que la música: es una experiencia colectiva inolvidable.
+                    </p>
+                </div>
+
+                <div class="venue-info">
+                    <h3 class="venue-title">📍 #{event.place}</h3>
+                    <p class="venue-address">Av. Industrial 1247, Zona Norte, Santiago</p>
+                    <div class="venue-features">
+                        <span class="feature-tag">Sistema de sonido profesional</span>
+                        <span class="feature-tag">2 pisos</span>
+                        <span class="feature-tag">Estacionamiento</span>
+                        <span class="feature-tag">Bar completo</span>
+                        <span class="feature-tag">Zona chill</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        //- <!-- Sección de compra -->
+        <aside class="purchase-section" id="purchase-section">
+            <h2 class="purchase-title">Comprar Tickets</h2>
+
+            <div class="price-display">
+                <div class="price-from">Desde</div>
+                <div class="price-amount" id="min-price">#{ Format_CLP(event.price_from)}</div>
+            </div>
+
+            <div class="ticket-options" id="ticket-options">
+                <div class="option-title">Tipo de entrada</div>
+             
+            </div>
+
+            <div class="quantity-selector">
+                <span class="quantity-label">Cantidad:</span>
+                <div class="quantity-controls">
+                    <button class="quantity-btn" id="decrease-btn">-</button>
+                    <span class="quantity-display" id="quantity-display">1</span>
+                    <button class="quantity-btn" id="increase-btn">+</button>
+                </div>
+            </div>
+
+            <div class="total-section" id="total-section">
+              
+            </div>
+
+            <button class="buy-now-btn" id="buy-now-btn">Comprar Ahora</button>
+
+            <div class="secure-info">🔒 Compra 100% segura y protegida</div>
+        </aside>
+
+        <script type="module" src="#{base}assets/js/custom/sticky_ticket.js"></script>
+        
+    </main>
+
+

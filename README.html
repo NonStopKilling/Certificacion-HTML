@@ -1,0 +1,186 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="certificaci-n-html-rodrigo-salgado">Certificación HTML Rodrigo Salgado</h1>
+<p>Proyecto de certificación final HTML</p>
+<h2 id="descripci-n-del-proyecto">Descripción del Proyecto</h2>
+<p>Copypaste del profe pero aumentando un poco el nivel del proyecto</p>
+<h2 id="arquitectura-del-proyecto">Arquitectura del Proyecto</h2>
+<p>/
+├── assets/                  # Recursos estáticos compilados
+│   ├── css/                 # Estilos
+│   ├── img/                 # Recursos gráficos
+│   │   └── brands/          # Identidad visual
+│   └── js/                  # Scripts
+│       └── custom/          # Scripts personalizados
+├── src/                     # Código fuente
+│   ├── components/          # Componentes modulares
+│   ├── data/                # Gestión de datos
+│   │   └── collections/     # Colecciones de datos estructurados 
+│   ├── functions/           # Lógica funcional
+│   │   └── utilities/       # Funciones de utilidad
+│   ├── includes/            # Fragmentos estructurales
+│   ├── layouts/             # Plantillas base
+│   ├── plugins/             # Integraciones externas
+│   └── views/               # Páginas y vistas
+│       └── sections/        # Secciones específicas
+├── index.html               # Punto de entrada compilado
+└── prepros-6.config         # Configuración de compilación</p>
+<h2 id="principios-arquitect-nicos">Principios Arquitectónicos</h2>
+<ul>
+<li><strong>Modularidad</strong>: Separación clara de responsabilidades en componentes independientes y reutilizables.</li>
+<li><strong>Gestión de Datos Centralizada</strong>: Sistema para administrar datos globales y específicos de manera estructurada.</li>
+<li><strong>Abstracción Funcional</strong>: Encapsulamiento de lógica en funciones utilitarias reutilizables.</li>
+<li><strong>Compilación Eficiente</strong>: Proceso automatizado de transformación de código fuente a archivos estáticos optimizados.</li>
+<li><strong>Separación de Entornos</strong>: Clara distinción entre desarrollo local y despliegue en producción.</li>
+<li><strong>Sintaxis Híbrida</strong>: Uso de bloques HTML estándar dentro de archivos PUG, aprovechando la compatibilidad de HTML con PUG para mantener la claridad del código.</li>
+</ul>
+<h2 id="capas-tecnol-gicas">Capas Tecnológicas</h2>
+<ul>
+<li><strong>Capa de Plantillas</strong>: Sistema de generación de HTML basado en componentes.</li>
+<li><strong>Capa de Procesamiento</strong>: Herramientas de compilación y transformación de archivos.</li>
+<li><strong>Capa de Despliegue</strong>: Configuración para servidores web de alto rendimiento.</li>
+<li><strong>Capa de Interactividad</strong>: Funcionalidad del lado del cliente.</li>
+<li><strong>Capa de Presentación</strong>: Estilos y diseño visual.</li>
+</ul>
+<h2 id="ciclo-de-desarrollo">Ciclo de Desarrollo</h2>
+<ol>
+<li><p><strong>Fase de Desarrollo</strong>:</p>
+<ul>
+<li>Creación y modificación de archivos fuente en la estructura <code>src/</code>.</li>
+<li>Compilación automática de cambios mediante el sistema de procesamiento.</li>
+<li>Visualización en tiempo real con servidor de desarrollo integrado.</li>
+</ul>
+</li>
+<li><p><strong>Fase de Compilación</strong>:</p>
+<ul>
+<li>Transformación de archivos fuente a formatos finales según configuración.</li>
+<li>Generación de estructura de salida con rutas personalizadas.</li>
+<li>Optimización de recursos para rendimiento.</li>
+</ul>
+</li>
+<li><p><strong>Fase de Despliegue</strong>:</p>
+<ul>
+<li>Transferencia de archivos compilados al entorno de producción.</li>
+<li>Configuración del servidor web para servir archivos estáticos.</li>
+<li>Optimización de entrega de contenido al usuario final.</li>
+</ul>
+</li>
+</ol>
+<h2 id="sistema-de-compilaci-n">Sistema de Compilación</h2>
+<p>El sistema de compilación se configura mediante un archivo de configuración centralizado que define:</p>
+<ul>
+<li>Rutas de entrada y salida para los archivos fuente.</li>
+<li>Reglas de transformación para diferentes tipos de archivos.</li>
+<li>Configuración del entorno de desarrollo local.</li>
+<li>Opciones de optimización para archivos compilados.</li>
+</ul>
+<h2 id="patrones-de-implementaci-n">Patrones de Implementación</h2>
+<h3 id="componentes-modulares">Componentes Modulares</h3>
+<pre><code class="lang-pug">// Implementación de componentes reutilizables
++component(param1, param2)
+</code></pre>
+<h3 id="sistema-de-datos">Sistema de Datos</h3>
+<pre><code class="lang-pug">// Acceso al sistema centralizado de datos
+&lt;p&gt;#{variable_global}&lt;/p&gt;
+</code></pre>
+<h3 id="utilidades-funcionales">Utilidades Funcionales</h3>
+<pre><code class="lang-pug">// Implementación de funciones utilitarias
+&lt;p&gt;#{stringUtility(&quot;valor de entrada&quot;)}&lt;/p&gt;
+&lt;p&gt;#{formatUtility(&quot;valor para formatear&quot;)}&lt;/p&gt;
+&lt;p&gt;#{calculationUtility(numericValue)}&lt;/p&gt;
+</code></pre>
+<h2 id="enfoque-de-sintaxis">Enfoque de Sintaxis</h2>
+<p>Este proyecto aprovecha la compatibilidad de HTML con PUG para simplificar el desarrollo:</p>
+<h3 id="uso-de-html-est-ndar">Uso de HTML Estándar</h3>
+<pre><code class="lang-pug">// Bloques HTML estándar dentro de archivos PUG
+&lt;div class=&quot;container&quot;&gt;
+    &lt;h1&gt;Título de la página&lt;/h1&gt;
+    &lt;p&gt;Contenido en HTML estándar&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="uso-de-caracter-sticas-pug">Uso de Características PUG</h3>
+<pre><code class="lang-pug">// Características específicas de PUG
+include ../includes/head
+
++component(param1, param2)
+
+- const variable = &#39;valor&#39;
+&lt;p&gt;Valor dinámico: #{variable}&lt;/p&gt;
+</code></pre>
+<p>Esta combinación permite aprovechar las ventajas de PUG (inclusiones, mixins, variables) mientras se mantiene la familiaridad de la sintaxis HTML para la estructura principal del contenido.</p>
+<h2 id="implementaci-n">Implementación</h2>
+<ol>
+<li><p><strong>Requisitos del Sistema</strong>:</p>
+<ul>
+<li>Sistema de compilación compatible</li>
+<li>Sistema de control de versiones</li>
+<li>Entorno de servidor web para producción</li>
+</ul>
+</li>
+<li><p><strong>Configuración de Desarrollo</strong>:</p>
+<ul>
+<li>Clonar o descargar el boilerplate</li>
+<li>Configurar herramienta de compilación</li>
+<li>Iniciar entorno de desarrollo local</li>
+</ul>
+</li>
+<li><p><strong>Configuración de Producción</strong>:</p>
+<ul>
+<li>Configurar servidor web</li>
+<li>Implementar estrategia de despliegue</li>
+<li>Optimizar entrega de contenido estático</li>
+</ul>
+</li>
+</ol>
+<h2 id="configuraci-n-y-uso-con-prepros-pro-6">Configuración y Uso con Prepros Pro 6</h2>
+<p>Para utilizar este proyecto con Prepros Pro 6, siga estos pasos:</p>
+<ol>
+<li><p><strong>Configuración Inicial</strong>:</p>
+<ul>
+<li>Arrastre la carpeta completa del proyecto a la interfaz de Prepros Pro 6.</li>
+<li>Prepros detectará automáticamente la configuración desde el archivo <code>prepros-6.config</code>.</li>
+</ul>
+</li>
+<li><p><strong>Proceso de Compilación Manual</strong>:</p>
+<ul>
+<li>A medida que se generan nuevas rutas a través de carpetas, es necesario compilar manualmente los archivos PUG correspondientes.</li>
+<li>Los archivos en las siguientes carpetas requieren compilación manual cuando se crean o modifican:<ul>
+<li><code>src/views/category/</code>: Páginas de categorías del sitio</li>
+<li><code>src/views/single/</code>: Páginas únicas como sobre-nosotros, contacto, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Ejemplos de Páginas que Requieren Compilación Manual</strong>:</p>
+<ul>
+<li>Páginas de categoría: blog, productos, servicios, etc.</li>
+<li>Páginas únicas: sobre-nosotros, contacto, términos-y-condiciones, políticas-de-privacidad, etc.</li>
+</ul>
+</li>
+<li><p><strong>Proceso de Compilación</strong>:</p>
+<ul>
+<li>Para cada nueva página, haga clic derecho en el archivo PUG correspondiente en Prepros.</li>
+<li>Seleccione &quot;Compile&quot; para generar el archivo HTML.</li>
+<li>Los archivos se compilarán siguiendo la estructura definida en <code>prepros-6.config</code>, generalmente con el nombre <code>index.html</code> en la carpeta de destino.</li>
+</ul>
+</li>
+</ol>
+<p>Este proceso asegura que todas las páginas del sitio se compilen correctamente y mantengan la estructura de rutas adecuada para su despliegue en producción.</p>
+<h2 id="extensibilidad">Extensibilidad</h2>
+<p>El boilerplate está diseñado para ser extendido mediante:</p>
+<ol>
+<li>Creación de nuevos componentes modulares</li>
+<li>Ampliación del sistema de datos</li>
+<li>Adición de nuevas funciones utilitarias</li>
+<li>Integración con sistemas externos</li>
+<li>Personalización de plantillas base</li>
+</ol>
+<h2 id="licencia">Licencia</h2>
+<p>Este proyecto está disponible como código abierto bajo la licencia <a href="https://opensource.org/licenses/MIT">MIT</a>.</p>
+
+      </body>
+    </html>

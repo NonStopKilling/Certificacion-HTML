@@ -22,7 +22,7 @@ include ../includes/head
             <option>Progressive</option>
         </select>
         <input type="text" class="search-input" placeholder="Ciudad">
-        <button class="search-button"><img src="#{base}assets/img/icons/fire.webp" width="30" alt="telemoji fire" style="position: absolute;margin-left: -21px;margin-top: -6px">&nbsp&nbsp Buscar</button>
+        <button class="search-button"> 🤞 Buscar</button>
         <p class="subtitle">Descubre las fiestas más exclusivas, DJs internacionales y la escena electrónica más vibrante de tu ciudad.</p>
     </section>
 
@@ -71,17 +71,37 @@ include ../includes/head
         <h2 class="section-title">Próximos eventos destacados</h2>
 
         <div class="events-grid">
-            +card_event("#", "Warehouse Sessions", "Sábado 12 de Julio", "Underground Club", "22:00 - 06:00", "Techno Underground", "25.000")
-            +card_event("#", "Neon Nights", "Viernes 18 de Julio", "Rooftop Paradise", "23:00 - 05:00", "Progressive House", "45.000")
-            +card_event("#", "Bass Overdrive", "Domingo 20 de Julio", "Industrial Zone", "21:00 - 04:00", "Drum & Bass", "55.000")
-            +card_event("#", "Sunset Rave", "Sábado 25 de Julio", "Beach Club", "18:00 - 02:00", "Trance & Progressive", "75.000")
-            +card_event("#", "Electric Storm", "Viernes 31 de Julio", "Mega Arena", "20:00 - 06:00", "Dubstep & Bass", "120.000")
-            +card_event("#", "Deep House Vibe", "Sábado 02 de Agosto", "Secret Location", "22:30 - 05:30", "Deep House", "35.000")
- 
+            each value, index in events.inperson_events
+                +card_event( value.name, value.date, value.place, `${value.start_time} - ${value.end_time}`, value.category, value.price_from )
+                
+            //- +card_event("Warehouse Sessions", "Sábado 12 de Julio", "Underground Club", "22:00 - 06:00", "Techno Underground", "25.000")
+            //- +card_event("Neon Nights", "Viernes 18 de Julio", "Rooftop Paradise", "23:00 - 05:00", "Progressive House", "45.000")
+            //- +card_event("Bass Overdrive", "Domingo 20 de Julio", "Industrial Zone", "21:00 - 04:00", "Drum & Bass", "55.000")
+            //- +card_event("Sunset Rave", "Sábado 25 de Julio", "Beach Club", "18:00 - 02:00", "Trance & Progressive", "75.000")
+            //- +card_event("Electric Storm", "Viernes 31 de Julio", "Mega Arena", "20:00 - 06:00", "Dubstep & Bass", "120.000")
+            //- +card_event("Deep House Vibe", "Sábado 02 de Agosto", "Secret Location", "22:30 - 05:30", "Deep House", "35.000")
+
         </div>
 
     </section>
+  
+ 
+    //- <section class="featured-events">
+        
+    //-     <h2 class="section-title">Próximos eventos destacados</h2>
+        
+    //-     <div class="events-grid">
+        
+        
+        
+    //-         each value, index in events.inperson_events
+    //-             +card_event( value.name, value.date, value.place, `${value.start_time} - ${value.end_time}`, value.category, value.price_from )
+            
+    //-     </div>
 
+    //- </section>
+    
+ 
 </main>
 
 
@@ -90,3 +110,4 @@ console.log("Hola Mundo desde 🎟️ TicketPass 😎")
 
 
  include ../includes/footer
+ 

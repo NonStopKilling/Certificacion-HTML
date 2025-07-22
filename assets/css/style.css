@@ -7,9 +7,11 @@
 }
 
 body {
-    background-color: #cefff2;
+    background: #e6ffff;
+    background: linear-gradient(90deg,rgb(241, 255, 241) 0%, rgb(255, 245, 245) 50%, rgb(255, 255, 255) 100%);
+
     font-family: Arial, sans-serif;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -47,14 +49,14 @@ body {
     text-decoration: none;
     font-weight: 500;
     padding: 8px 15px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transition: all 0.3s ease;
     color: black;
 }
 
 
 .nav-links a:hover {
-    background: #f0f0f0;
+    background: #fff4f4;
     color: black;
 }
 
@@ -123,7 +125,7 @@ body {
 .search-input {
     padding: 15px 20px;
     border: 2px solid black;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     font-size: 1.1em;
     width: 280px;
     min-width: 80px;
@@ -133,7 +135,7 @@ body {
 .search-select {
     padding: 15px 20px;
     border: 2px solid black;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     font-size: 1.1em;
     width: 200px;
     min-width: 150px;
@@ -148,7 +150,7 @@ body {
     color: white;
     font-size: 1.1em;
     font-weight: bold;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
@@ -206,8 +208,10 @@ body {
 }
 
 .section-title {
+    margin-top: 40px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2rem;
+    text-transform: uppercase;
     margin-bottom: 40px;
     color: black;
 }
@@ -222,14 +226,15 @@ body {
 .genre-card {
     text-align: center;
     padding: 40px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+    background: #ffffff2b;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .genre-card:hover {
-    background: #f0f0f0;
+    background: #ffffff77;
     transform: translateY(-5px);
 }
 
@@ -263,10 +268,10 @@ body {
 }
 
 .event-card {
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 3px dotted rgb(255, 98, 98);
+    border-radius: 0px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.9s ease;
     background: white;
     cursor: pointer;
     text-decoration: none;
@@ -281,13 +286,13 @@ body {
 }
 
 .event-image {
-    height: 200px;
-    background: #f0f0f0;
+    /* height: 100px; */
+    /* background: #fff4f4; */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3em;
-    border-bottom: 2px solid black;
+    font-size: 2em;
+    /* border-bottom: 2px solid black; */
 }
 
 .event-info {
@@ -295,10 +300,11 @@ body {
 }
 
 .event-title {
-    font-size: 1.4em;
-    font-weight: bold;
+    font-size: 2.34em;
+    font-weight: bolder;
     margin-bottom: 15px;
     color: black;
+    text-transform: uppercase;
 }
 
 .event-details {
@@ -316,6 +322,345 @@ body {
     margin-bottom: 20px;
     color: black;
 }
+
+/* 🎟️ Sección: Detalle de Evento ---------------------------------------------------------> */
+
+.event-detail {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+}
+
+.event-info-detail {
+    background: white;
+    border: 2px solid black;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header {
+    position: relative;
+}
+
+.event-image-large {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #fff4f4 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+    color: #999;
+    border-bottom: 2px solid black;
+}
+
+.event-badge {
+    position: absolute;
+  
+    background: rgb(250, 137, 137);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.7em;
+    font-weight: bold;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.event-content {
+    padding: 40px;
+}
+
+.event-title-large {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.event-subtitle {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.event-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-icon {
+    font-size: 1.5em;
+    width: 40px;
+    text-align: center;
+}
+
+.detail-text {
+    flex: 1;
+}
+
+.detail-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: black;
+}
+
+.event-description {
+    margin-bottom: 40px;
+}
+
+.description-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.description-text {
+    line-height: 1.6;
+    color: #666;
+    font-size: 1.1em;
+}
+
+.venue-info {
+    background: #f9f9f9;
+    padding: 30px;
+    /* border-radius: 8px; */
+    border: 1px solid #fff4f4;
+}
+
+.venue-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.venue-address {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.venue-features {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-tag {
+    background: white;
+    border: 1px solid #fff4f4;
+    padding: 5px 12px;
+    /* border-radius: 15px; */
+    font-size: 0.9em;
+    color: #666;
+    cursor: pointer;
+}
+
+
+/* 🎟️ Sección: Compra de Tickets ---------------------------------------------------------> */
+
+.purchase-section {
+    background: white;
+    border: 2px solid black;
+    /* border-radius: 10px; */
+    padding: 30px;
+    height: fit-content;
+    position: sticky;
+    top: 40px;
+}
+
+.purchase-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+.price-display {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.price-from {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.price-amount {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: black;
+}
+
+.ticket-options {
+    margin-bottom: 30px;
+}
+
+.option-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.ticket-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #fff4f4;
+    /* border-radius: 8px; */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ticket-option:hover {
+    border-color: black;
+    background: #f9f9f9;
+}
+
+.ticket-option.selected {
+    border-color: black;
+    background: #fff4f4;
+    border-width: 2px;
+}
+
+.option-info {
+    flex: 1;
+}
+
+.option-name {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.option-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.option-price {
+    font-weight: bold;
+    color: black;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.quantity-label {
+    font-weight: 600;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    width: 35px;
+    height: 35px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    /* border-radius: 5px; */
+}
+
+.quantity-btn:hover {
+    background: black;
+    color: white;
+}
+
+.quantity-display {
+    min-width: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.total-section {
+    padding: 20px 0;
+    border-top: 2px solid #fff4f4;
+    margin-bottom: 25px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total-final {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 10px;
+    border-top: 1px solid #fff4f4;
+}
+
+.buy-now-btn {
+    width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    /* border-radius: 8px; */
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.buy-now-btn:hover {
+    background: white;
+    color: black;
+}
+
+.secure-info {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
 
 
 
@@ -348,13 +693,13 @@ body {
     text-decoration: none;
     font-weight: 500;
     padding: 8px 15px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     transition: all 0.3s ease;
     color: black;
 }
 
 .footer-links a:hover {
-    background: #f0f0f0;
+    background: #fff4f4;
     color: black;
 }
 
@@ -375,6 +720,45 @@ body {
 
 /* 📱 Reglas CSS desde 0px hasta los 943px de Ancho de la ventana */
 @media (max-width: 943px) {
+
+
+    /* Adaptaciones para la página de detalle del evento */
+    .event-detail {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .event-info-detail {
+        margin-bottom: 20px;
+    }
+
+    .event-info-detail .event-image-large {
+        height: 250px;
+        font-size: 4em;
+    }
+
+    .event-info-detail .event-details-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .event-info-detail .event-title {
+        font-size: 2.2em;
+    }
+
+    .purchase-section {
+        position: static;
+    }
+
+    /* Opciones de tickets responsivas */
+    .ticket-options .ticket-option {
+        padding: 12px;
+    }
+
+    .ticket-option .option-description {
+        font-size: 0.85em;
+    }
 
     /* 🧩 Include: Navbar ---------------------------------------> */
     .navbar, .footer {
@@ -447,11 +831,11 @@ body {
 
 
     /* 🏠 Sección: Grilla de Eventos  --------------------------------------> */
-    
+
     .events-grid {
         grid-template-columns: 1fr;
     }
-    
+
 
     /* 🧩 Include: Footer ---------------------------------------------> */
 
@@ -467,12 +851,3 @@ body {
 
 }
 
-/* go custom  */
-main {
-    text-align: center;
-    min-height: 73vh;
-}
-main h1 {
-    
-    margin-top: 50px;
-}

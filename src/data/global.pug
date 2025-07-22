@@ -12,7 +12,7 @@ mixin card_event_category(name, description)
         </div>
 
 mixin card_event(path_url, title, date, place, event_time, genre, price_from)
-        <a href="#{path_url}" class="event-card">
+        <a href="#/evento/{path_url}" class="event-card">
             <div class="event-image"></div>
             <div class="event-info">
                 <h3 class="event-title">#{title}</h3>
@@ -22,7 +22,7 @@ mixin card_event(path_url, title, date, place, event_time, genre, price_from)
                     <p>#{event_time}</p>
                     <p>#{genre}</p>
                 </div>
-                <div class="event-price">Desde $#{price_from}</div>
+                <div class="event-price">Desde $#{ Format_CLP(price_from)}</div>
             </div>
         </a>
 
@@ -54,6 +54,3 @@ mixin card_event(path_url, title, date, place, event_time, genre, price_from)
 //- </script>
  
 include collections/inperson_events
-include utilities/string
-include utilities/integer
-include utilities/date
