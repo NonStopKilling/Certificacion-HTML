@@ -1,37 +1,92 @@
-//- Include Local Data --------------------------------------------------------------------->
+//- Include Local Data ------------------------------------------------------------------------------------------------------------------------>
 - const base = ""
 
 
-//- Include Head   --------------------------------------------------------------------->
+//- Include Head   ---------------------------------------------------------------------------------------------------------------------------->
 include ../includes/head
+ 
+<main class="content">
+
+ 
+    +hero_section("assets/img/ico/mirror_ball.webp", "La noche nunca termina", "Tu acceso VIP al mejor underground electrónico")
+ 
+
+    <section class="main-search">
+        <input type="text" class="search-input" placeholder="¿Qué evento buscas?">
+        <select class="search-select">
+            <option>Géneros</option>
+            <option>Techno</option>
+            <option>House</option>
+            <option>Trance</option>
+            <option>Drum & Bass</option>
+            <option>Progressive</option>
+        </select>
+        <input type="text" class="search-input" placeholder="Ciudad">
+        <button class="search-button"><img src="#{base}assets/img/icons/fire.webp" width="30" alt="telemoji fire" style="position: absolute;margin-left: -21px;margin-top: -6px">&nbsp&nbsp Buscar</button>
+        <p class="subtitle">Descubre las fiestas más exclusivas, DJs internacionales y la escena electrónica más vibrante de tu ciudad.</p>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">2.5K+</div> <!-- Número destacado -->
+                <div class="stat-label">Fiestas organizadas</div> <!-- Etiqueta descriptiva -->
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">DJs internacionales</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Ravers conectados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Ciudades bailando</div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="genres-section">
+        <h2 class="section-title">Géneros que mueven la noche</h2>
+        <div class="genres-grid">
+
+            each value, index in events.category_events
+                +card_event_category(value.name, value.description)
 
 
-//- <h2> <------ Homepage -------> </h2>
+            //- +card_event_category("Techno", "Beats hipnóticos underground que te transportan a otro mundo")
+            //- +card_event_category("House", "Grooves contagiosos que hacen vibrar cada rincón")
+            //- +card_event_category("Trance", "Viajes sonoros épicos llenos de energía celestial")
+            //- +card_event_category("Drum & Bass", "Energía pura a 175 BPM que acelera tu corazón")
+            //- +card_event_category("Progressive", "Evolución musical que construye momentos únicos")
+            //- +card_event_category("Dubstep", "Drops explosivos que rompen todas las reglas")   
 
-//- <h1>bienvenido a la wea </h1>
-//- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque natus ratione eveniet magni, harum </p>
+        </div>
+    </section>
 
-+example_component_use("Hola", "Mundo")
+    <section class="featured-events">
+
+        <h2 class="section-title">Próximos eventos destacados</h2>
+
+        <div class="events-grid">
+            +card_event("#", "Warehouse Sessions", "Sábado 12 de Julio", "Underground Club", "22:00 - 06:00", "Techno Underground", "25.000")
+            +card_event("#", "Neon Nights", "Viernes 18 de Julio", "Rooftop Paradise", "23:00 - 05:00", "Progressive House", "45.000")
+            +card_event("#", "Bass Overdrive", "Domingo 20 de Julio", "Industrial Zone", "21:00 - 04:00", "Drum & Bass", "55.000")
+            +card_event("#", "Sunset Rave", "Sábado 25 de Julio", "Beach Club", "18:00 - 02:00", "Trance & Progressive", "75.000")
+            +card_event("#", "Electric Storm", "Viernes 31 de Julio", "Mega Arena", "20:00 - 06:00", "Dubstep & Bass", "120.000")
+            +card_event("#", "Deep House Vibe", "Sábado 02 de Agosto", "Secret Location", "22:30 - 05:30", "Deep House", "35.000")
+ 
+        </div>
+
+    </section>
+
+</main>
 
 
-//- Local Widget Components  --------------------------------------------------------------------->
-
-main 
-    h1 ¿Ganas de divertirte?
-    p si
-
-//- Local Libs  ---------------------------------------------------------------------------------->
-
-
-
-//- Local Configs  ------------------------------------------------------------------------------->
-
-
-
-//- Local JS Script ------------------------------------------------------------------------------->
 script.
-    console.log("Hola Mundo desde Jade/Pug Project 😎")
+console.log("Hola Mundo desde 🎟️ TicketPass 😎")
 
 
-//- Include Footer  ------------------------------------------------------------------------------>
-include ../includes/footer
+ include ../includes/footer

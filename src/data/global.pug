@@ -1,34 +1,59 @@
-//-<script>
+mixin hero_section(icon_path, title, subtitle)
+        <section class="hero">
+            <img src="#{base}#{icon_path}" width="140">
+            <h1>#{title}</h1>
+            <p class="tagline">#{subtitle}</p>
+        </section>
+
+mixin card_event_category(name, description)
+        <div class="genre-card">
+            <h3 class="genre-name">#{name}</h3>
+            <p class="genre-description">#{description}</p>
+        </div>
+
+mixin card_event(path_url, title, date, place, event_time, genre, price_from)
+        <a href="#{path_url}" class="event-card">
+            <div class="event-image"></div>
+            <div class="event-info">
+                <h3 class="event-title">#{title}</h3>
+                <div class="event-details">
+                    <p>#{date}</p>
+                    <p>#{place}</p>
+                    <p>#{event_time}</p>
+                    <p>#{genre}</p>
+                </div>
+                <div class="event-price">Desde $#{price_from}</div>
+            </div>
+        </a>
+
+
+ 
+
+//- <script>
 -
 
-    //- Variables Globales y Constantes
-    const whatsapp = "+56961923035";
-    const address = "Av. Apoquindo #6410, OF. 605, Las Condes, Santiago, Chile";
+    let events = {
 
+        inperson_events: [],
 
-    //- Fechas Dinámicas
-    const current_year = new Date().getFullYear();
-    const next_year = current_year + 1;
-    const year_after_next = next_year + 1;
+        category_events: [
 
+            { name:"techno", description: "Beats hipnóticos underground que te transportan a otro mundo"},
+            { name:"house", description: "Grooves contagiosos que hacen vibrar cada rincón"},
+            { name:"trance", description: "Viajes sonoros épicos llenos de energía celestial"},
+            { name:"drum & bass", description: "Energía pura a 175 BPM que acelera tu corazón"},
+            { name:"progressive", description: "Evolución musical que construye momentos únicos"},
+            { name:"dubstep", description: "Evolución musical que construye momentos únicos"},
 
-    //- Objeto de Prueba
-    let programs = {
+        ]
 
-        courses: [],
-        bootcamps: [],
-        workshops: [],
-        events: [],
-        books: []
 
     }
 
 
-
-//-</script>
-
-
-
-
-//- Include Collections
-include collections/courses
+//- </script>
+ 
+include collections/inperson_events
+include utilities/string
+include utilities/integer
+include utilities/date
